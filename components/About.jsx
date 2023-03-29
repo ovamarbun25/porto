@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
+//Image
+import Profile from "../public/assets/profile.jpg";
+
 const About = () => {
   return (
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
@@ -22,7 +25,7 @@ const About = () => {
         </div>
 
         <div className="w-full m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease-in duration-300">
-            <Image className="rounded-xl" src="/../public/assets/profile.jpg" alt="Ova Marbun" width='250' height='0'/>
+            <Image className="rounded-xl" src={Profile} alt="Ova Marbun" width='250' height='0'/>
         </div>
       </div>
     </div>

@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+//IMAGE
+import Logo from "../public/assets/navLogo.png";
+
 //ICONS
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -32,7 +35,7 @@ const Navbar = () => {
     <div className={shadowNav ? 'fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]' : 'fixed w-full h-20 z-[100]'}>
       <div className="flex justify-between items-center h-full px-2 2xl:px-16">
         <Image
-          src="/../public/assets/navLogo.png"
+          src={Logo}
           alt="/"
           width="75"
           height="0"
