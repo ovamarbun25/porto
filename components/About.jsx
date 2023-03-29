@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 //Image
-import Profile from "../public/assets/profile.jpg";
+import Profile from "../public/assets/profile.JPG";
 
 const About = () => {
   return (
