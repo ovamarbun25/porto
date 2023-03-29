@@ -1,5 +1,6 @@
+import Link from "next/link";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdMailOutline, MdPermContactCalendar } from "react-icons/md";
 
 const Main = () => {
@@ -22,16 +23,27 @@ const Main = () => {
 
           <div className="flex items-center justify-between max-w-[330px] m-auto py-3">
             <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
-                <FaLinkedin />
+              <Link
+                href="https://www.linkedin.com/in/ova-ferdinan-marbun/"
+                target="_blank"
+              >
+                <FaLinkedinIn />
+              </Link>
             </div>
             <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link href="https://github.com/ovamarbun25" target="_blank">
                 <FaGithub />
+              </Link>
             </div>
             <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link href="mailto:ovaferdinanmarbun@gmail.com">
                 <MdMailOutline />
+              </Link>
             </div>
             <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link href="tel:+6282277230412">
                 <MdPermContactCalendar />
+              </Link>
             </div>
           </div>
         </div>

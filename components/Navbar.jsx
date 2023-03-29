@@ -32,14 +32,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={shadowNav ? 'fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]' : 'fixed w-full h-20 z-[100]'}>
+    <div
+      className={
+        shadowNav
+          ? "fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]"
+          : "fixed w-full h-20 z-[100]"
+      }
+    >
       <div className="flex justify-between items-center h-full px-2 2xl:px-16">
-        <Image
-          src={Logo}
-          alt="/"
-          width="75"
-          height="0"
-        />
+        <Image src={Logo} alt="/" width="75" height="0" />
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
@@ -116,7 +117,12 @@ const Navbar = () => {
               </p>
               <div className="flex items-center justify-between my-3 py-2 sm:w-[80%]">
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <FaLinkedinIn />
+                  <Link
+                    href="https://www.linkedin.com/in/ova-ferdinan-marbun/"
+                    target="_blank"
+                  >
+                    <FaLinkedinIn />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                   <FaGithub />
