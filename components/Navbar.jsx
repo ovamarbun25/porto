@@ -40,7 +40,9 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center h-full px-2 2xl:px-16">
-        <Image src={Logo} alt="/" width="75" height="0" />
+        <Link href="/">
+          <Image src={Logo} alt="/" width="75" height="0" />
+        </Link>
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
@@ -125,13 +127,19 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <FaGithub />
+                  <Link href="https://github.com/ovamarbun25" target="_blank">
+                    <FaGithub />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <MdMailOutline />
+                  <Link href="mailto:ovaferdinanmarbun@gmail.com">
+                    <MdMailOutline />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <MdPermContactCalendar />
+                  <Link href="tel:+6282277230412">
+                    <MdPermContactCalendar />
+                  </Link>
                 </div>
               </div>
             </div>
