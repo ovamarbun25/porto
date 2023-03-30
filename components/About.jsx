@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div id="about" className="w-full md:h-screen lg:h-110 flex items-center">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-4">
-        <div className="col-span-2 mt-20 lg:mt-0 p-4">
+        <div className="col-span-2 mt-20 md:mt-0 p-4">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
             About
           </p>
@@ -34,7 +34,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="w-fit m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease-in duration-300">
+        <div className="w-fit m-auto  shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease-in duration-300">
           <Image
             className="rounded-xl"
             src={Profile}

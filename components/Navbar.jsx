@@ -45,18 +45,18 @@ const Navbar = () => {
           <Image src={Logo} alt="/" width="75" height="0" />
         </Link>
         <div>
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex md:justify-between md:items-center md:gap-8 md:mr-10">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+              <li className="text-sm uppercase hover:border-b">Home</li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+              <li className="text-sm uppercase hover:border-b">About</li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+              <li className="text-sm uppercase hover:border-b">Skills</li>
             </Link>
             <Link href="/#contact">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="text-sm uppercase hover:border-b">
                 Contact
               </li>
             </Link>

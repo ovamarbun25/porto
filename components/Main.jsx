@@ -5,7 +5,7 @@ import { MdMailOutline, MdPermContactCalendar } from "react-icons/md";
 
 const Main = () => {
   return (
-    <div id="first" className="w-full h-screen text-center">
+    <div id="first" className="w-full h-110 text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div className="mt-10">
           <p className="uppercase text-sm tracking-widest text-gray-600">
