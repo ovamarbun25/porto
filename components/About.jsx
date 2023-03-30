@@ -6,14 +6,14 @@ import Profile from "../public/assets/picture.jpg";
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-        <div className="col-span-2 mt-5">
+    <div id="about" className="w-full md:h-screen lg:h-110 flex items-center">
+      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-4">
+        <div className="col-span-2 mt-20 lg:mt-0">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
             About
           </p>
           <h2 className="py-2">A Glimpse About Me :)</h2>
-          <p className="py-2 text-gray-600">
+          <p className="py-2 text-gray-600 text-justify">
             After I complete my high school, I go to one of best tech institute
             in my region named Del Institute of Technology and take software
             engineering technology as my major. The first time I learn about
@@ -23,7 +23,7 @@ const About = () => {
             software calls to all my passions; it incorporates creativity,
             problem solving and logical thinking.
           </p>
-          <p className="py-2 text-gray-600">
+          <p className="py-2 text-gray-600 text-justify">
             My specialities include quickly learning new skills or programming
             languages, problem solving and Model View Controller (MVC) methods
             of organizing code. So far I have OOP, PHP, HTML,
@@ -34,7 +34,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="w-full m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease-in duration-300">
+        <div className="w-fit m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-110 ease-in duration-300">
           <Image
             className="rounded-xl"
             src={Profile}

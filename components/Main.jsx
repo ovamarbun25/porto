@@ -12,7 +12,7 @@ const Main = () => {
             Scroll through to know me better ;)
           </p>
           <h1 className="py-4 text-gray-700">
-            Hi, It's me <span className="text-[#5651e5]">Ova</span>
+            Hi, It's me <span className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Ova</span>
           </h1>
           <h1 className="py-4 text-gray-700">A Tech Enthusiast</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
