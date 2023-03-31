@@ -15,6 +15,7 @@ module.exports = {
         100: "30rem",
         105: "32rem",
         110: "34rem",
+        115: "36rem",
         "screen/9": "calc(100vh/1.08)", 
       },
       animation: {

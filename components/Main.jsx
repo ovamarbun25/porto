@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 //MOTION
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 
 //ICONS
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -11,113 +11,81 @@ import { MdMailOutline, MdPermContactCalendar } from "react-icons/md";
 //Observer
 import { useInView } from "react-intersection-observer";
 
+const divVariants = {
+  h: {
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 0.7,
+      bounce: 0.3,
+    },
+  },
+  v: {
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 0.7,
+      bounce: 0.2,
+    },
+  },
+};
+
+const divVariantsBefore = {
+  vMin: {
+    y: "-100vh",
+  },
+  vPlus: {
+    y: "100vh",
+  },
+  xMin: {
+    x: "-100vw",
+  },
+  xPlus: {
+    x: "100vw",
+  },
+};
+
 const Main = () => {
   const { ref, inView } = useInView();
+  const animationControls1 = useAnimationControls();
+  const animationControls2 = useAnimationControls();
+  const animationControls3 = useAnimationControls();
+  const animationControls4 = useAnimationControls();
+  const animationControls5 = useAnimationControls();
 
-  const animationUp = useAnimation();
-  const animationDown = useAnimation();
-  const animationLeft = useAnimation();
-  const animationRight = useAnimation();
-
-  const startAnimationUp = () => {
-    animationUp.start({
-      y: 0,
-      transition: {
-        type: "spring",
-        duration: 3,
-        bounce: 0.3,
-        delay:0.2
-      },
-    });
-  };
-
-  const startAnimationLeft = () => {
-    animationLeft.start({
-      x: 0,
-      transition: {
-        type: "spring",
-        duration: 3,
-        bounce: 0.3,
-        delay:0.2
-      },
-    });
-  };
-
-  const startAnimationRight = () => {
-    animationRight.start({
-      x: 0,
-      transition: {
-        type: "spring",
-        duration: 3,
-        bounce: 0.3,
-        delay:0.2
-      },
-    });
-  };
-
-  const startAnimationDown = () => {
-    animationDown.start({
-      y: 0,
-      transition: {
-        type: "spring",
-        duration: 3,
-        bounce: 0.3,
-        delay:0.2
-      },
-    });
-  };
-
-  const leftBeforeAnimation = () => {
-    animationLeft.start({
-      x: "-100vw",
-    });
-  };
-
-  const rightBeforeAnimation = () => {
-    animationRight.start({
-      x: "100vw",
-    });
-  };
-
-  const upBeforeAnimation = () => {
-    animationUp.start({
-      y: "-100vh",
-    });
-  };
-
-  const downBeforeAnimation = () => {
-    animationDown.start({
-      y: "100vh",
-    });
+  const sequence = async () => {
+    await animationControls1.start(divVariants.v);
+    await animationControls2.start(divVariants.h);
+    await animationControls3.start(divVariants.h);
+    await animationControls4.start(divVariants.h);
+    animationControls5.start(divVariants.v);
   };
 
   useEffect(() => {
     console.log(inView);
     if (inView) {
-      startAnimationUp();
-      startAnimationLeft();
-      startAnimationRight();
-      startAnimationDown();
+      sequence();
     }
     if (!inView) {
-      upBeforeAnimation();
-      leftBeforeAnimation();
-      rightBeforeAnimation();
-      downBeforeAnimation();
+      animationControls1.start(divVariantsBefore.vMin);
+      animationControls2.start(divVariantsBefore.xMin);
+      animationControls3.start(divVariantsBefore.xPlus);
+      animationControls4.start(divVariantsBefore.xMin);
+      animationControls5.start(divVariantsBefore.vPlus);
     }
   }, [inView]);
 
   return (
-    <div ref={ref} id="first" className="w-full h-screen/9 text-center overflow-hidden">
+    <div id="first" className="w-full h-screen md:h-115 text-center overflow-hidden">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <div className="mt-10">
-          <motion.div animate={animationUp}>
+        <div className="mt-10" ref={ref}>
+          <motion.div animate={animationControls1}>
             <p className="uppercase text-sm tracking-widest text-gray-600">
               Scroll through to know me better ;)
             </p>
           </motion.div>
 
-          <motion.div animate={animationLeft}>
+          <motion.div animate={animationControls2}>
             <h1 className="py-4 text-gray-700">
               Hi, It's me{" "}
               <span className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
@@ -126,11 +94,11 @@ const Main = () => {
             </h1>
           </motion.div>
 
-          <motion.div animate={animationRight}>
+          <motion.div animate={animationControls3}>
             <h1 className="py-4 text-gray-700">A Tech Enthusiast</h1>
           </motion.div>
 
-          <motion.div animate={animationDown}>
+          <motion.div animate={animationControls4}>
             <p className="py-4 text-gray-600 max-w-[70%] m-auto">
               I am a software engineer that has a huge interest in software
               engineering, able to work in a team, be responsible, and learn
@@ -138,7 +106,7 @@ const Main = () => {
             </p>
           </motion.div>
 
-          <motion.div animate={animationDown}>
+          <motion.div animate={animationControls5}>
             <div className="flex items-center justify-between max-w-[330px] m-auto py-3">
               <div className="rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
                 <Link
