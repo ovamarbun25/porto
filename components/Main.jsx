@@ -58,7 +58,7 @@ const Main = () => {
     await animationControls2.start(divVariants.h);
     await animationControls3.start(divVariants.h);
     await animationControls4.start(divVariants.h);
-    animationControls5.start(divVariants.v);
+    await animationControls5.start(divVariants.v);
   };
 
   useEffect(() => {

@@ -54,7 +54,7 @@ const About = () => {
   const sequence = async () => {
     await animationControls1.start(divVariants.v);
     await animationControls2.start(divVariants.v);
-    animationControls3.start(divVariants.h);
+    await animationControls3.start(divVariants.h);
   };
 
   useEffect(() => {

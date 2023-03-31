@@ -57,11 +57,10 @@ const Skills = () => {
 
   const animationControls1 = useAnimationControls();
   const animationControls2 = useAnimationControls();
-  const animationControls3 = useAnimationControls();
 
   const sequence = async () => {
     await animationControls1.start(divVariants.v);
-    animationControls2.start(divVariants.h);
+    await animationControls2.start(divVariants.h);
   };
 
   useEffect(() => {
