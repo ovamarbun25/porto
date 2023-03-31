@@ -72,7 +72,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full h-screen md:h-115 flex items-center overflow-hidden"
+      className="w-full h-screen flex items-center overflow-hidden"
     >
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-4">
         <div ref={ref} className="col-span-2 mt-20 p-4">

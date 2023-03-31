@@ -76,7 +76,7 @@ const Main = () => {
   }, [inView]);
 
   return (
-    <div id="first" className="w-full h-screen md:h-115 text-center overflow-hidden">
+    <div id="first" className="w-full h-screen text-center overflow-hidden">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div className="mt-10" ref={ref}>
           <motion.div animate={animationControls1}>

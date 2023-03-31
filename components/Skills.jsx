@@ -76,7 +76,7 @@ const Skills = () => {
   }, [inView]);
 
   return (
-    <div id="skills" className="w-full h-screen md:h-115 p-2 overflow-hidden">
+    <div id="skills" className="w-full h-screen p-2 overflow-hidden">
       <div
         ref={ref}
         className="max-w-[1240px] mx-auto flex flex-col justify-center h-full mt-20 md:mt-0"
